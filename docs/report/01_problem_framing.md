@@ -1,37 +1,87 @@
-# Phase 1: Problem Framing
+# Phase 1: Problem Framing — Dual Module (A + B)
 
-## 📝 Problem Definition
+## 1. Problem Statement
 
-Educational institutions often struggle to identify at-risk students before they fail or experience severe mental health crises. This project addresses two critical facets:
+Students often experience academic decline and well-being challenges that go undetected until performance or behavior deteriorates significantly. Institutions lack early, interpretable signals to identify at-risk students and prioritize timely support. This project focuses on risk identification (not diagnosis) to assist teachers and counselors in making informed, early interventions.
 
-1. **Academic Persistence**: Identifying students likely to drop out or fail based on behavior and history.
-2. **Mental Well-being**: Detecting early signs of high stress or emotional distress through text analysis.
+## 2. Dual-Module Structure
 
-## 👥 Stakeholders & Impact
+The system is explicitly divided into two independent but related modules:
 
-- **Students**: Receive proactive support and early intervention.
-- **Educators**: Targeted focus on students who need the most help.
-- **Counselors**: Quantifiable data to prioritize mental health check-ins.
+- **Module A — Academic Risk**: Identifies students at risk of academic decline (GPA drop, course failure, disengagement).
+- **Module B — Well-Being Risk**: Identifies students at risk of well-being deterioration using non-clinical, observable indicators.
 
-## 🎯 Success Metrics
+Each module produces its own **independent risk score and explanation**.
 
-- **Module A (Academic)**: High Recall (minimizing missed at-risk students) while maintaining acceptable Precision.
-- **Module B (Mental Health)**: Maximum sensitivity to high-stress indicators (Recall > 0.90 for "High Risk" class).
-- **Explainability**: 100% of predictions must be accompanied by a human-readable "Why?" factor.
+## 3. Proposed Solution
 
-## 🛠 Assumptions
+The system outputs two continuous risk scores [0, 1]:
 
-- Student historical data is available and updated regularly.
-- Text inputs (logs/journals) are provided voluntarily by students.
-- Risk levels are categorized into Low, Medium, and High.
+- **A-Score (Academic Risk)**: Likelihood of near-term academic decline.
+- **B-Score (Well-Being Risk)**: Likelihood of entering a high-risk well-being state.
+  Higher scores indicate greater urgency for human attention.
 
-## ⚠️ Known Risks
+## 4. Role of Human Intervention
 
-- **Data Privacy**: Handling sensitive mental health text requires strict de-identification.
-- **Self-Reporting Bias**: Students might mask their true feelings in digital logs.
-- **Automation Bias**: Educators might rely too heavily on the AI without human judgment.
+The system is a **decision-support tool only**:
 
-## 🔄 Alternatives Considered
+- **Teachers** act on Academic Risk Scores.
+- **Counselors** act on Well-Being Risk Scores.
+- **No automated decisions**, penalties, or clinical diagnoses.
 
-- **Heuristic-based flagging**: Rule-based systems (e.g., "if GPA < 2.0") are too rigid and lack predictive power.
-- **Single-module system**: Would miss the correlation between mental health and academic performance.
+## 5. Definition of “Risk”
+
+### Academic Risk (Module A)
+
+- Declining GPA or grades.
+- Missing or late assignments.
+- Attendance irregularities.
+- Reduced learning platform engagement.
+
+### Well-Being Risk (Module B)
+
+- Persistent disengagement or withdrawal.
+- Sudden behavioral changes.
+- Self-reported stress or burnout indicators.
+- Environmental and contextual stressors.
+
+## 6. Feature Conceptualization
+
+### Module A — Academic Risk Indicators
+
+| Feature Category     | Observable Indicator      | Data Source     |
+| :------------------- | :------------------------ | :-------------- |
+| Academic Performance | Low or declining GPA      | Gradebooks      |
+| Assignment Behavior  | Missed / late submissions | LMS             |
+| Attendance           | Frequent absences         | Attendance logs |
+| Digital Engagement   | Reduced activity          | LMS analytics   |
+
+### Module B — Well-Being Risk Indicators
+
+| Feature Category       | Observable Indicator         | Non-Clinical Source   |
+| :--------------------- | :--------------------------- | :-------------------- |
+| Emotional & Behavioral | Withdrawal, visible distress | Teacher observations  |
+| Self-Reported          | High stress, burnout scores  | Surveys               |
+| Behavioral Incidents   | Repeated non-academic issues | Incident logs         |
+| Contextual             | Housing, workload stress     | Institutional records |
+
+_Note: Sensitive attributes (age, gender) are used for fairness checks/context only, not direct prediction._
+
+## 7. Explainability Requirement
+
+Each score must answer:
+
+- **Why** is the student at risk?
+- **Which** factors contributed most?
+- **What** has changed recently?
+
+## 8. Ethical Boundary Lock
+
+- **No mental health diagnosis.**
+- **No automated penalties.**
+- **Mandatory human-in-the-loop.**
+- **Privacy-aware data handling.**
+
+## 9. One-Sentence Project Definition
+
+An explainable dual-module system assigning academic and well-being risk scores to support early, human-led intervention.

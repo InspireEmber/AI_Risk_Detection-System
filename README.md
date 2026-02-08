@@ -8,10 +8,13 @@ The application is built on the **MERN Stack** (MongoDB, Express.js, React, Node
 
 ---
 
-## 🚦 Project Status: Phase 1 — Problem Framing
+## 🚦 Project Status: Phase 2 — Data Acquisition
 
-We are currently defining the scope, target metrics, and ethical boundaries of the system.
-See [Problem Framing Report](docs/report/01_problem_framing.md) for details.
+**Current Focus**: � **Data Acquisition & Dataset Selection**
+Phase 1 is complete. We are now selecting and structuring datasets for the integrated Dual-Module risk engine.
+
+- [Phase 1: Problem Framing Report](docs/report/01_problem_framing.md)
+- [Phase 2: Data Acquisition Report](docs/report/02_data_acquisition.md)
 
 ---
 
@@ -111,9 +114,3 @@ student-risk-ai/
 - **Actionable Insights**: Converting raw weights into human-readable intervention suggestions.
 
 ---
-
-## 📝 Future Work
-
-- Integration with real-time Student Information Systems (SIS).
-- Advanced transformer-based NLP (BERT/RoBERTa).
-- Automated intervention scheduling via dashboard notifications.
