@@ -1,0 +1,20 @@
+# Core Data Science
+pandas       # Data manipulation and tabular analysis
+numpy        # Numerical computing
+matplotlib   # Basic visualization
+seaborn      # Statistical data visualization
+
+# Machine Learning & NLP
+scikit-learn # Core ML algorithms and evaluation
+shap         # Model explainability (XAI)
+nltk         # Basic text preprocessing
+spacy        # Advanced NLP and entity detection
+
+# Model Serving (Backend for ML)
+fastapi      # Microservice to serve ML predictions to MERN stack
+uvicorn      # ASGI server
+pydantic     # Data validation
+
+# Utilities
+python_dotenv # Environment variable management
+pyyaml       # Configuration management
