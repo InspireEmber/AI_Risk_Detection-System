@@ -1,0 +1,62 @@
+{
+    "schema": {
+        "Student_ID": "int64",
+        "Study_Hours_Per_Day": "float64",
+        "Extracurricular_Hours_Per_Day": "float64",
+        "Sleep_Hours_Per_Day": "float64",
+        "Social_Hours_Per_Day": "float64",
+        "Physical_Activity_Hours_Per_Day": "float64",
+        "GPA": "float64",
+        "Stress_Level": "object"
+    },
+    "ranges": {
+        "Study_Hours_Per_Day": [
+            5.0,
+            10.0
+        ],
+        "Extracurricular_Hours_Per_Day": [
+            0.0,
+            4.0
+        ],
+        "Sleep_Hours_Per_Day": [
+            5.0,
+            10.0
+        ],
+        "Social_Hours_Per_Day": [
+            0.0,
+            6.0
+        ],
+        "Physical_Activity_Hours_Per_Day": [
+            0.0,
+            13.0
+        ],
+        "GPA": [
+            2.24,
+            4.0
+        ]
+    },
+    "total_hours_violations": 205,
+    "max_total_hours": 24.000000000000004,
+    "min_total_hours": 23.999999999999996,
+    "target_unique": [
+        "Moderate",
+        "Low",
+        "High"
+    ],
+    "target_counts": {
+        "High": 1029,
+        "Moderate": 674,
+        "Low": 297
+    },
+    "missing": {
+        "Student_ID": 0,
+        "Study_Hours_Per_Day": 0,
+        "Extracurricular_Hours_Per_Day": 0,
+        "Sleep_Hours_Per_Day": 0,
+        "Social_Hours_Per_Day": 0,
+        "Physical_Activity_Hours_Per_Day": 0,
+        "GPA": 0,
+        "Stress_Level": 0,
+        "Total_Hours": 0
+    }
+}

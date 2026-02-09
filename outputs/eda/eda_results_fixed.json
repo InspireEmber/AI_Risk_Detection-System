@@ -1,0 +1,124 @@
+{
+  "overview": {
+    "shape": [
+      2000,
+      9
+    ],
+    "columns": [
+      "Student_ID",
+      "Study_Hours_Per_Day",
+      "Extracurricular_Hours_Per_Day",
+      "Sleep_Hours_Per_Day",
+      "Social_Hours_Per_Day",
+      "Physical_Activity_Hours_Per_Day",
+      "GPA",
+      "Stress_Level",
+      "Stress_Level_Encoded"
+    ],
+    "missing": {
+      "Student_ID": 0,
+      "Study_Hours_Per_Day": 0,
+      "Extracurricular_Hours_Per_Day": 0,
+      "Sleep_Hours_Per_Day": 0,
+      "Social_Hours_Per_Day": 0,
+      "Physical_Activity_Hours_Per_Day": 0,
+      "GPA": 0,
+      "Stress_Level": 0,
+      "Stress_Level_Encoded": 0
+    },
+    "target_counts": {
+      "High": 1029,
+      "Moderate": 674,
+      "Low": 297
+    },
+    "target_perc": {
+      "High": 51.449999999999996,
+      "Moderate": 33.7,
+      "Low": 14.85
+    }
+  },
+  "stats": {
+    "Study_Hours_Per_Day": {
+      "count": 2000.0,
+      "mean": 7.4758000000000004,
+      "std": 1.4238883695867885,
+      "min": 5.0,
+      "25%": 6.3,
+      "50%": 7.4,
+      "75%": 8.7,
+      "max": 10.0,
+      "skew": 0.03498784186936124
+    },
+    "Extracurricular_Hours_Per_Day": {
+      "count": 2000.0,
+      "mean": 1.9901,
+      "std": 1.1558546578160238,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 3.0,
+      "max": 4.0,
+      "skew": 0.0012629369659481705
+    },
+    "Sleep_Hours_Per_Day": {
+      "count": 2000.0,
+      "mean": 7.50125,
+      "std": 1.4609485353055411,
+      "min": 5.0,
+      "25%": 6.2,
+      "50%": 7.5,
+      "75%": 8.8,
+      "max": 10.0,
+      "skew": -0.0070959299103526855
+    },
+    "Social_Hours_Per_Day": {
+      "count": 2000.0,
+      "mean": 2.7045500000000002,
+      "std": 1.6885140915665198,
+      "min": 0.0,
+      "25%": 1.2,
+      "50%": 2.6,
+      "75%": 4.1,
+      "max": 6.0,
+      "skew": 0.18422209662333497
+    },
+    "Physical_Activity_Hours_Per_Day": {
+      "count": 2000.0,
+      "mean": 4.328300000000001,
+      "std": 2.5141100780877457,
+      "min": 0.0,
+      "25%": 2.4,
+      "50%": 4.1,
+      "75%": 6.1,
+      "max": 13.0,
+      "skew": 0.39923921729901546
+    },
+    "GPA": {
+      "count": 2000.0,
+      "mean": 3.11596,
+      "std": 0.29867353639160993,
+      "min": 2.24,
+      "25%": 2.9,
+      "50%": 3.11,
+      "75%": 3.33,
+      "max": 4.0,
+      "skew": 0.02751585572653759
+    }
+  },
+  "target_corr": {
+    "Study_Hours_Per_Day": 0.7388432058141327,
+    "Extracurricular_Hours_Per_Day": -0.006099425201769755,
+    "Sleep_Hours_Per_Day": -0.29891668758472656,
+    "Social_Hours_Per_Day": -0.05470197083157304,
+    "Physical_Activity_Hours_Per_Day": -0.20520710595895827,
+    "GPA": 0.5503947345170657,
+    "Stress_Level_Encoded": 1.0
+  },
+  "redundancy": [
+    {
+      "feat1": "GPA",
+      "feat2": "Study_Hours_Per_Day",
+      "corr": 0.7344679806560517
+    }
+  ]
+}

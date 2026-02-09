@@ -8,14 +8,15 @@ The application is built on the **MERN Stack** (MongoDB, Express.js, React, Node
 
 ---
 
-## 🚦 Project Status: Phase 3 — Exploratory Data Analysis (EDA)
+## 🚦 Project Status: Phase 4 — Data Validation & Audit
 
-**Current Focus**: 📊 **Exploratory Data Analysis & XAI Strategy Finalization**
-Phase 2 is complete. We have acquired the primary tabular dataset (`data/raw.csv`) and finalized the architectural strategy for the dual-module engine.
+**Current Focus**: 🛡️ **Data Integrity & Compositional Validation**
+Phase 3 (EDA) and Phase 4 (Validation) are complete. We have identified the "24-Hour Law" in our activity data and confirmed the dataset's structural integrity.
 
 - [Phase 1: Problem Framing Report](docs/report/01_problem_framing.md)
 - [Phase 2: Data Acquisition Report](docs/report/02_data_acquisition.md)
 - [Phase 3: EDA & Insights Log](docs/report/03_eda_insights.md)
+- [Phase 4: Data Validation Report](docs/report/04_data_validation_report.md)
 
 ---
 
@@ -77,6 +78,8 @@ graph TD
 student-risk-ai/
 ├── data/                      # Raw and processed datasets
 ├── notebooks/                # Experimental and exploratory analysis
+│   ├── 01_student_eda.ipynb  # Primary Tabular EDA
+│   └── 02_student_validation.ipynb # Integrity & Audit
 ├── src/                      # ML Pipeline Code
 │   ├── preprocessing.py      # Data cleaning
 │   ├── feature_engineering.py # Vectorization & Encoding
@@ -85,6 +88,8 @@ student-risk-ai/
 │   ├── student_pipeline.py    # Module A orchestration
 │   └── text_pipeline.py       # Module B orchestration
 ├── models/                   # Saved ML artifacts (.pkl)
+├── outputs/                  # Diagnostic plots and JSON logs
+│   └── eda/                  # Validation & Insight artifacts
 ├── app/                      # MERN Fullstack Layer
 │   ├── client/               # React Frontend
 │   │   ├── src/
