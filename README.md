@@ -8,13 +8,14 @@ The application is built on the **MERN Stack** (MongoDB, Express.js, React, Node
 
 ---
 
-## 🚦 Project Status: Phase 2 — Data Acquisition
+## 🚦 Project Status: Phase 3 — Exploratory Data Analysis (EDA)
 
-**Current Focus**: � **Data Acquisition & Dataset Selection**
-Phase 1 is complete. We are now selecting and structuring datasets for the integrated Dual-Module risk engine.
+**Current Focus**: 📊 **Exploratory Data Analysis & XAI Strategy Finalization**
+Phase 2 is complete. We have acquired the primary tabular dataset (`data/raw.csv`) and finalized the architectural strategy for the dual-module engine.
 
 - [Phase 1: Problem Framing Report](docs/report/01_problem_framing.md)
 - [Phase 2: Data Acquisition Report](docs/report/02_data_acquisition.md)
+- [Phase 3: EDA & Insights Log](docs/report/03_eda_insights.md)
 
 ---
 
@@ -59,12 +60,14 @@ graph TD
 - **Goal**: Predict the probability of academic failure or dropout.
 - **Features**: Attendance records, previous grades, study hours, and lifestyle indicators.
 - **Output**: Risk score (0.1 - 1.0) and primary risk factors.
+- **Empirical Status**: Fully grounded in real-world tabular data (~2,000 records).
 
 ### Module B: Mental Health Text Risk Detection (NLP ML)
 
 - **Goal**: Analyze student-generated text (journals, logs) to estimate mental stress levels.
 - **Inputs**: Sentiment analysis and stress-related keywords.
 - **Output**: Emotional risk level (Low, Medium, High) and semantic themes.
+- **Architectural Status**: Uses **Synthetic Student Narratives** for architectural demonstration, decoupled from the primary dataset to maintain research integrity.
 
 ---
 
