@@ -41,6 +41,8 @@ The Target distribution (`High`: 51.4%) vs (`Low`: 14.8%) is valid but represent
 
 The dataset is internally consistent and lacks "impossible" values (no negative hours, no >24h sums). It is structurally ready for Module A. However, the modeler must be warned that the data is **compositional**, meaning the value of one feature is constrained by the others.
 
+*Resolution (2026-02-10)*: Compositional constraints were mitigated in Phase 5 by dropping `Extracurricular_Hours_Per_Day`.
+
 ---
 
 ## 4. Constraints for Cleaning & Preprocessing

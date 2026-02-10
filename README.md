@@ -8,15 +8,16 @@ The application is built on the **MERN Stack** (MongoDB, Express.js, React, Node
 
 ---
 
-## 🚦 Project Status: Phase 4 — Data Validation & Audit
+## 🚦 Project Status: Phase 5 — Preprocessing & Feature Engineering
 
-**Current Focus**: 🛡️ **Data Integrity & Compositional Validation**
-Phase 3 (EDA) and Phase 4 (Validation) are complete. We have identified the "24-Hour Law" in our activity data and confirmed the dataset's structural integrity.
+**Current Focus**: 🧪 **Advanced Feature Engineering & Compositional Scaling**
+Phase 5 is complete. We have successfully mitigated linear dependency, engineered interaction biological-academic ratios, and generated a model-ready dataset.
 
 - [Phase 1: Problem Framing Report](docs/report/01_problem_framing.md)
 - [Phase 2: Data Acquisition Report](docs/report/02_data_acquisition.md)
 - [Phase 3: EDA & Insights Log](docs/report/03_eda_insights.md)
 - [Phase 4: Data Validation Report](docs/report/04_data_validation_report.md)
+- [Phase 5: Feature Engineering Report](docs/report/05_feature_engineering_report.md)
 
 ---
 
@@ -79,10 +80,10 @@ student-risk-ai/
 ├── data/                      # Raw and processed datasets
 ├── notebooks/                # Experimental and exploratory analysis
 │   ├── 01_student_eda.ipynb  # Primary Tabular EDA
-│   └── 02_student_validation.ipynb # Integrity & Audit
+│   ├── 02_student_validation.ipynb # Integrity & Audit
+│   └── 03_student_features.ipynb # Preprocessing & Ratios
 ├── src/                      # ML Pipeline Code
-│   ├── preprocessing.py      # Data cleaning
-│   ├── feature_engineering.py # Vectorization & Encoding
+│   ├── preprocessing.py      # Data cleaning & Engineering
 │   ├── training.py           # Model persistence
 │   ├── explainability.py      # SHAP integration
 │   ├── student_pipeline.py    # Module A orchestration
